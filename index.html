@@ -1,0 +1,63 @@
+<!-- HTML Document -->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>2026 Geri Sayım | Ahmet Eymen</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body { 
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); 
+            color: white; 
+            text-align: center; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+        #timer { 
+            font-size: clamp(3rem, 10vw, 6rem); 
+            font-weight: 800;
+            color: #38bdf8; 
+            text-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        }
+        #final-msg { display: none; font-size: 4rem; color: #fbbf24; animation: pulse 2s infinite; }
+        
+        /* İmza Kısmı */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 0.9rem;
+            color: #64748b;
+            letter-spacing: 1px;
+        }
+        .highlight { color: #f472b6; font-weight: bold; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <h2 style="color: #94a3b8; font-weight: 400;">2026'ya Kalan Süre</h2>
+        <div id="timer">Loading...</div>
+        <div id="final-msg">🎉 HAPPY 2026! 🎉</div>
+    </div>
+
+    <footer>
+        Developed by <span class="highlight">Ahmet Eymen</span>
+    </footer>
+
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+</body>
+</html>
