@@ -5,7 +5,7 @@ from datetime import datetime
 from js import document, confetti
 
 async def start_countdown():
-    # 2026 Target
+    # 2027 Target
     target = datetime(2027, 1, 1, 0, 0, 0)
 
     while True:
@@ -15,17 +15,17 @@ async def start_countdown():
         if diff.total_seconds() <= 0:
             document.getElementById("timer").style.display = "none"
             document.getElementById("final-msg").style.display = "block"
-            # Confetti Shoow!
+            # COnfetti SHOOOW!
             confetti.apply(None)
             break
-
+        
+        days = diff.days
         hours, rem = divmod(diff.seconds, 3600)
         mins, secs = divmod(rem, 60)
         
         # Send data to HTML element
-        document.getElementById("timer").innerHTML = f"{hours:02d}.{mins:02d}.{secs:02d}"
+        document.getElementById("timer").innerHTML = f"{days:03d} day {hours:02d}.{mins:02d}.{secs:02d}"
         await asyncio.sleep(1)
 
 # Start a Loop
-
 asyncio.ensure_future(start_countdown())
