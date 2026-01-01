@@ -6,7 +6,7 @@ from js import document, confetti
 
 async def start_countdown():
     # 2026 Target
-    target = datetime(2026, 1, 1, 0, 0, 0)
+    target = datetime(2027, 1, 1, 0, 0, 0)
 
     while True:
         now = datetime.now()
